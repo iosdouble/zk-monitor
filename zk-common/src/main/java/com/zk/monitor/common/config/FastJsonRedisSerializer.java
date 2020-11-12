@@ -26,7 +26,7 @@ public class FastJsonRedisSerializer<T> implements RedisSerializer<T> {
     }
     static {
         // 这里需要修改
-        ParserConfig.getGlobalInstance().addAccept("com.xd.pre.modules.security.social");//解决fastJson autoType is not support错误
+        ParserConfig.getGlobalInstance().addAccept("com.zk.monitor.modules.security.social");//解决fastJson autoType is not support错误
         ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
     }
 

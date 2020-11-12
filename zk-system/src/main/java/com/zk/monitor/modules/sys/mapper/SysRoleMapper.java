@@ -10,10 +10,14 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * com.zk.monitor.modules.sys.mapper
+ * create by admin nihui
+ * create time 2020/11/12
+ * version 1.0
+ **/
 @Repository
 public interface SysRoleMapper extends BaseMapper<SysRole> {
-
-
     @Insert("insert into sys_role (role_name,role_code,role_desc,ds_type,ds_scope) values (#{roleName}, #{roleCode},#{roleDesc},#{dsType},#{dsScope})")
     @Options(useGeneratedKeys=true, keyProperty="roleId", keyColumn="role_id")
     Boolean insertRole(SysRole sysRole);
