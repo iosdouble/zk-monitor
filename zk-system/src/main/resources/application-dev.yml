@@ -93,3 +93,4 @@ spring:
     timeout: 6000ms
 
 uploadFileServerPathPrefix: /Users/lihaodong/Desktop/files
+debug: true

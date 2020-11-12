@@ -7,11 +7,12 @@ import com.zk.monitor.modules.data.datascope.DataScope;
 import com.zk.monitor.modules.sys.domain.SysUser;
 import com.zk.monitor.modules.sys.dto.UserDTO;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
-@Repository
+@Mapper
 public interface SysUserMapper extends BaseMapper<SysUser> {
 
     @Insert("insert into sys_user (username,password,dept_id,job_id,phone,email,avatar,lock_flag) values (#{username},#{password},#{deptId},#{jobId},#{phone},#{email},#{avatar},#{lockFlag})")

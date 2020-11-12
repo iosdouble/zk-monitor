@@ -2,6 +2,7 @@ package com.zk.monitor.generator.mapper;
 
 import com.zk.monitor.generator.domain.SysColumnEntity;
 import com.zk.monitor.generator.domain.SysTableEntity;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
@@ -13,7 +14,7 @@ import java.util.List;
  * create time 2020/11/12
  * version 1.0
  **/
-@Repository
+@Mapper
 public interface SysCodeMapper {
 
     /**

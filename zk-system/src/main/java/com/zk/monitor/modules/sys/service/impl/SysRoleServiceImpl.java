@@ -29,10 +29,10 @@ import java.util.stream.Collectors;
 @Service
 public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> implements ISysRoleService {
 
-    @Resource
+    @Autowired
     private ISysRoleMenuService roleMenuService;
 
-    @Resource
+    @Autowired
     private ISysRoleDeptService roleDeptService;
 
     @Autowired

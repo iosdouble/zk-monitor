@@ -2,8 +2,10 @@ package com.zk.monitor.modules.sys.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.zk.monitor.modules.sys.domain.SysSocial;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
+@Mapper
 public interface SysSocialMapper extends BaseMapper<SysSocial> {
 
     /**

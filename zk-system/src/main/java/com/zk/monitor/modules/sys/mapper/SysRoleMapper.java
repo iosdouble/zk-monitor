@@ -4,9 +4,9 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.zk.monitor.modules.sys.domain.SysMenu;
 import com.zk.monitor.modules.sys.domain.SysRole;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ import java.util.List;
  * create time 2020/11/12
  * version 1.0
  **/
-@Repository
+@Mapper
 public interface SysRoleMapper extends BaseMapper<SysRole> {
     @Insert("insert into sys_role (role_name,role_code,role_desc,ds_type,ds_scope) values (#{roleName}, #{roleCode},#{roleDesc},#{dsType},#{dsScope})")
     @Options(useGeneratedKeys=true, keyProperty="roleId", keyColumn="role_id")

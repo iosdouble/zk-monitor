@@ -3,10 +3,12 @@ package com.zk.monitor.modules.sys.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.zk.monitor.modules.sys.domain.SysDict;
 import com.zk.monitor.modules.sys.domain.SysDictItem;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
+@Mapper
 public interface SysDictMapper extends BaseMapper<SysDict> {
 
 

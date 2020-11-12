@@ -25,7 +25,6 @@ import java.util.List;
  **/
 @EnableTransactionManagement
 @Configuration
-@MapperScan({"com.zk.monitor.**.mapper"})
 public class MyBatisPlusConfig {
     @Autowired
     private PreTenantHandler preTenantHandler;
