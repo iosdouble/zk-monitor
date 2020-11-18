@@ -94,3 +94,6 @@ spring:
 
 uploadFileServerPathPrefix: /Users/lihaodong/Desktop/files
 debug: true
+monitor:
+  rate: 60
+  cron: 0 0 0 * * ?

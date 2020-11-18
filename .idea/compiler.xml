@@ -7,16 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="zk-system" />
         <module name="zk-log" />
-        <module name="zk-generator" />
-        <module name="zk-security" />
         <module name="zk-common" />
+        <module name="zk-generator" />
+        <module name="core-monitor" />
+        <module name="zk-system" />
+        <module name="zk-security" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="core-monitor" options="-parameters" />
       <module name="zk-common" options="-parameters" />
       <module name="zk-generator" options="-parameters" />
       <module name="zk-log" options="-parameters" />

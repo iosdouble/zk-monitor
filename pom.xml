@@ -21,6 +21,7 @@
         <module>zk-log</module>
         <module>zk-security</module>
         <module>zk-system</module>
+        <module>core-monitor</module>
     </modules>
 
 
