@@ -7,6 +7,7 @@ import com.zk.monitor.core.util.PathUtil;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
 
@@ -41,8 +42,27 @@ public class Jstack {
     public static String dump(String id) throws IOException {
         String path = PathUtil.getRootPath("dump/"+id+"_thread.txt");
         String s = ExecuteCmd.execute(new String[]{"jstack", id});
-        File file = new File(path);
-        FileUtils.write(file,s, Charset.forName("UTF-8"));
+        saveAsFileWriter(path,s);
+//        File file = new File(path);
+//        FileUtils.write(file,s, Charset.forName("UTF-8"));
         return path;
+    }
+
+    private static void saveAsFileWriter( String filePath,String content) {
+        FileWriter fwriter = null;
+        try {
+            // true表示不覆盖原来的内容，而是加到文件的后面。若要覆盖原来的内容，直接省略这个参数就好
+            fwriter = new FileWriter(filePath, true);
+            fwriter.write(content);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            try {
+                fwriter.flush();
+                fwriter.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 }

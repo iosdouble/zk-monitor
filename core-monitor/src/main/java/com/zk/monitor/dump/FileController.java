@@ -22,6 +22,7 @@ import java.io.IOException;
  * version 1.0
  **/
 @RestController
+@RequestMapping("/dump")
 public class FileController {
     private Logger logger = LoggerFactory.getLogger(getClass().getName());
 
@@ -48,4 +49,6 @@ public class FileController {
         headers.setContentDispositionFormData("attachment", file.getName());
         return new ResponseEntity<>(FileUtils.readFileToByteArray(file),headers, HttpStatus.CREATED);
     }
+
+
 }

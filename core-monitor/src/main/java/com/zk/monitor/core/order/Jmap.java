@@ -19,7 +19,7 @@ public class Jmap {
      * @return
      */
     public static String dump(String id){
-        String path = PathUtil.getRootPath("dump/"+id+"_heap.hprof");
+        String path = PathUtil.getRootPath("dump/"+id+"_heap.txt");
         File file = new File(PathUtil.getRootPath("dump/"));
         if (!file.exists()){
             file.mkdirs();
